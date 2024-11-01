@@ -30,11 +30,5 @@ body {
     border: 1px solid black;
     height: 650px;
     width: 650px;
-    
-}
-
-#container div {
-    /* border: 1px solid blue; */
-    /* width: 100px; */
-    /* height: 100px; */
+    display: grid;   
 }
