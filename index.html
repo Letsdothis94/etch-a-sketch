@@ -13,17 +13,17 @@
     </header>
     <section class="form-grid-container">
         <section class="form">
-            <form id="main-form">
-                <input type="text" placeholder="Enter a number" name="sqNumber"></input>
-                <button type="submit">Submit</button>
-            </form>
-            <button id="resetBtn">Reset</button>
-            
+            <div class="settings">
+                <input id="colorPicker" type="color" value="#ff0000">
+                <button id="colorBtn">Color Mode</button>
+                <button id="unicornBtn">Rainbow Mode</button>
+                <span id="sizeValue">16 x 16</span>
+                <input id="sizeSlider" type="range" min="1" max="99" value="4"></input>
+                <button id="clearBtn">Clear</button>
+            </div>
         </section>
         <section class="container-box">
-            <div id="container">
-        
-            </div>
+            <div id="container"></div>
         </section>
     </section>
     <footer>
