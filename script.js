@@ -81,10 +81,11 @@ function changeColor(event) {
 function activateBtn(newMode) {
     if(currentMode === "rainbow") {
         unicornBtn.classList.remove("active");
+        unicornBtn.style.backgroundColor = randomColor();
     } else if(currentMode === "color") {
         colorPicker.classList.remove("active");
     }
-
+    
     if(newMode === "rainbow") {
         unicornBtn.classList.add("active");
     } else if(newMode === "color") {
