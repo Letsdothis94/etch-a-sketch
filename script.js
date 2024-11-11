@@ -57,7 +57,7 @@ function clearGrid() {
     container.innerHTML = "";
 }
 
-function displayGrid(size, color) {
+function displayGrid(size) {
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     for(let i = 0; i < size * size; i++) {
@@ -78,18 +78,24 @@ function changeColor(event) {
     }
 }
 
+const randomColor = () => {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    return `rgb(${r},${g},${b})`;
+} 
+
 function activateBtn(newMode) {
     if(currentMode === "rainbow") {
         unicornBtn.classList.remove("active");
-        unicornBtn.style.backgroundColor = randomColor();
     } else if(currentMode === "color") {
-        colorPicker.classList.remove("active");
+        colorBtn.classList.remove("active");
     }
     
     if(newMode === "rainbow") {
         unicornBtn.classList.add("active");
     } else if(newMode === "color") {
-        colorPicker.classList.add("active");
+        colorBtn.classList.add("active");
     }
 }
 
@@ -98,9 +104,4 @@ window.onload = () => {
     activateBtn(defaultMode);
 }
 
-const randomColor = () => {
-    let r = Math.floor(Math.random() * 256);
-    let g = Math.floor(Math.random() * 256);
-    let b = Math.floor(Math.random() * 256);
-    return `rgb(${r},${g},${b})`;
-} 
+
