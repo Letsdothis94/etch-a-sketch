@@ -4,19 +4,27 @@
     box-sizing: content-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     text-align: center;
+    background-color: #222831;
+    color: #EEEEEE;
+    font-family: "Electrolize", serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 header {
-    font-family: "Electrolize", serif;
     font-weight: 400;
     font-style: normal;
     padding: 2em;
 }
 
 .form-grid-container {
-    /* border: 1px solid black; */
     display: flex;
     padding: 1em;
     justify-content: center;
@@ -24,13 +32,11 @@ header {
 }
 
 .form {
-    border: 1px solid red;
     align-content: center;
-    width: 10%;
+    width: 14%;
 }
 
 .settings {
-    border: 1px solid yellow;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,7 +46,7 @@ header {
 
 .settings button {
     width: 10em;
-    background-color: #333;
+    background-color: #393E46;
     color: #f0f0f0;
     padding: 12px 20px;
     font-size: 1rem;
@@ -51,7 +57,11 @@ header {
 }
 
 .settings button:active {
-    background-color: aqua;
+    background: #4a4444;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    outline: none;
 }
 
 #colorPicker {
@@ -60,7 +70,17 @@ header {
   height: 100px;
   background-color: transparent;
   border: none;
+  border-radius: 15%;
   cursor: pointer;
+}
+
+#sizeSlider {
+    cursor: pointer;
+    width: 85%;
+}
+
+#sizeSlider:hover {
+    opacity: 1;
 }
 
 
@@ -72,10 +92,12 @@ header {
     width: 700px;
     height: 700px;
     justify-content: center;
+    background-color: #393E46;
 }
 
 #container {
-    border: 1px solid black;
+    background-color: #EEEEEE;
+    border: 4px solid black;
     height: 650px;
     width: 650px;
     display: grid;   
@@ -83,4 +105,15 @@ header {
 
 .grid-div {
     border: .5px solid #ccc;
+}
+
+button.active {
+    background-color: #222831;
+    color: #ededed;
+}
+
+footer {
+    margin-top: auto;
+    bottom: 0;
+    font-size: 1.2rem;
 }
