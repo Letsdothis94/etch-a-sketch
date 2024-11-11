@@ -8,3 +8,5 @@
 ### Future Updates:
 - Make the app responsive.
 - Add the option to save or download your art. 
+
+[Live Demo](https://theodinprojecthomework.github.io/etch-a-sketch/)
